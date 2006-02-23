@@ -4,7 +4,7 @@
 // Author:      Julian Smart
 // Modified by: ABX (2004) - adjustementd for conditional building
 // Created:     04/01/98
-// RCS-ID:      $Id: dialogs.h,v 1.44 2005/06/10 17:53:10 ABX Exp $
+// RCS-ID:      $Id$
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
