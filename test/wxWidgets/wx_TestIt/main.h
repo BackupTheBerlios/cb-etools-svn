@@ -27,7 +27,7 @@ class MyFrame: public wxFrame
 	private:
 		void OnQuit(wxCommandEvent& event);
 		void OnAbout(wxCommandEvent& event);
-		void OnTestIt(wxCommandEvent& event);
+		void OnTokenizer(wxCommandEvent& event);
 		DECLARE_EVENT_TABLE();
 };
 

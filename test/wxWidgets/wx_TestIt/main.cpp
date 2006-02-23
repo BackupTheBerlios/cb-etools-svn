@@ -1,23 +1,13 @@
 #include "main.h"
 
-//wxApplication
-IMPLEMENT_APP(MyApp);
-
-bool MyApp::OnInit()
-{
-    MyFrame* frame = new MyFrame(0L, _("wxWidgets Application Template"));
-    frame->Show();
-    return true;
-}
-
 int idMenuQuit = wxNewId();
 int idMenuAbout = wxNewId();
-int idMenuTestIt = wxNewId();
+int idMenuTokenizer = wxNewId();
 
 BEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_MENU(idMenuQuit, MyFrame::OnQuit)
     EVT_MENU(idMenuAbout, MyFrame::OnAbout)
-    EVT_MENU(idMenuTestIt, MyFrame::OnTestIt)
+    EVT_MENU(idMenuTokenizer, MyFrame::OnTokenizer)
 END_EVENT_TABLE()
 
 MyFrame::MyFrame(wxFrame *frame, const wxString& title)
@@ -31,8 +21,8 @@ MyFrame::MyFrame(wxFrame *frame, const wxString& title)
     mbar->Append(fileMenu, _("&File"));
 
     wxMenu* testitMenu = new wxMenu(_T(""));
-    testitMenu->Append(idMenuTestIt, _("&TestIt\tT"), _(""));
-    mbar->Append(testitMenu, _("&TestIt"));
+    testitMenu->Append(idMenuTokenizer, _("&Tokenizer\tT"), _(""));
+    mbar->Append(testitMenu, _("Test&It"));
 
     wxMenu* helpMenu = new wxMenu(_T(""));
     helpMenu->Append(idMenuAbout, _("&About\tF1"), _("Show info about this application"));
@@ -58,11 +48,11 @@ void MyFrame::OnQuit(wxCommandEvent& event)
 
 void MyFrame::OnAbout(wxCommandEvent& event)
 {
-    wxString msg;
+    wxString msg = _T("wxWidgets project to test several small code fragments");
     wxMessageBox(msg, _("Welcome to..."));
 }
 
-void MyFrame::OnTestIt(wxCommandEvent& event)
+void MyFrame::OnTokenizer(wxCommandEvent& event)
 {
     wxString msg;
     wxStringTokenizer tkz(wxT("1 2 3 4 5"), wxT(" "));
@@ -80,5 +70,16 @@ void MyFrame::OnTestIt(wxCommandEvent& event)
                     msg.c_str(),
                     nNumber);
     }
-    wxMessageBox(msg, _("TestIt..."));
+    wxMessageBox(msg, _("Tokenizer..."));
+}
+
+
+//wxApplication
+IMPLEMENT_APP(MyApp);
+
+bool MyApp::OnInit()
+{
+    MyFrame* frame = new MyFrame(0L, _("wx_TestIt"));
+    frame->Show();
+    return true;
 }
