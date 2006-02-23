@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_workspace_file>
-	<Workspace title="wxWidgets debug projects">
-		<Project filename="wx_pch.cbp" />
-		<Project filename="listctrl\listctrl.cbp" />
-		<Project filename="wx_ListCtrl\wx_ListCtrl.cbp" />
-		<Project filename="wx_IPaddress\wx_IPaddress.cbp" active="1" />
-	</Workspace>
-</CodeBlocks_workspace_file>
