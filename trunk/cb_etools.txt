@@ -1,3 +1,9 @@
+/*
+* $Revision:$
+* $Id:$
+* $HeadURL:$
+*/
+
 CodeBlocks etools  ( cb-etools )
 
 name:   tiwag   
