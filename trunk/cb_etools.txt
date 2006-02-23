@@ -1,0 +1,19 @@
+CodeBlocks etools  ( cb-etools )
+
+name:   tiwag   
+email:  tiwag DOT cb AT gmail DOT com
+
+
+project description:
+
+collection of tools and plugins for the Code::Blocks-IDE (www.codeblocks.org)
+
+primarily useful for embedded devices software-development 
+using cross-compilers, JTAG-debuggers and simulation tools 
+for several target platforms like ARM, SH3/4, AD and TI DSP's , ... 
+
+
+project log:
+
+2006/02/20  starting this project
+
