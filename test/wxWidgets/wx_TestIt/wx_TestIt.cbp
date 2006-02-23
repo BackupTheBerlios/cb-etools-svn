@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="3" />
+	<Project>
+		<Option title="wx_TestIt" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="wx_TestIt">
+				<Option output="wx_TestIt.exe" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option includeInTargetAll="1" />
+				<Option projectResourceIncludeDirsRelation="0" />
+			</Target>
+			<Environment>
+				<Variable name="WX_CFG" value="" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-g" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-Winvalid-pch" />
+			<Add option='-include &quot;wx_pch.h&quot;' />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DUSE_PCH" />
+			<Add directory="$(#WX.include)" />
+			<Add directory="$(#WX.lib)\gcc_dll$(WX_CFG)\msw" />
+			<Add directory="$(#WX)\contrib\include" />
+			<Add directory="..\" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#WX.include)" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="wxmsw26" />
+			<Add directory="$(#WX.lib)\gcc_dll$(WX_CFG)" />
+			<Add directory="$(#WX.lib)" />
+		</Linker>
+		<Unit filename="main.cpp">
+			<Option compilerVar="CPP" />
+			<Option target="wx_TestIt" />
+		</Unit>
+		<Unit filename="main.h">
+			<Option compilerVar="CPP" />
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="wx_TestIt" />
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

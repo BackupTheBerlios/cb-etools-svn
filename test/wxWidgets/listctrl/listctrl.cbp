@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+    <FileVersion major="1" minor="3" />
+    <Project>
+        <Option title="listctrl" />
+        <Option pch_mode="2" />
+        <Option compiler="gcc" />
+        <Build>
+            <Target title="listctrl">
+                <Option output="listctrl.exe" />
+                <Option type="0" />
+                <Option compiler="gcc" />
+                <Option includeInTargetAll="1" />
+                <Option projectResourceIncludeDirsRelation="0" />
+            </Target>
+            <Environment>
+                <Variable name="WX_CFG" value="" />
+            </Environment>
+        </Build>
+        <Compiler>
+            <Add option="-g" />
+            <Add option="-pipe" />
+            <Add option="-mthreads" />
+            <Add option="-Winvalid-pch" />
+            <Add option='-include &quot;wx_pch.h&quot;' />
+            <Add option="-D__GNUWIN32__" />
+            <Add option="-D__WXMSW__" />
+            <Add option="-DWXUSINGDLL" />
+            <Add option="-DUSE_PCH" />
+            <Add directory="$(#WX.include)" />
+            <Add directory="$(#WX.lib)\gcc_dll$(WX_CFG)\msw" />
+            <Add directory="$(#WX)\contrib\include" />
+            <Add directory="..\" />
+        </Compiler>
+        <ResourceCompiler>
+            <Add directory="$(#WX.include)" />
+        </ResourceCompiler>
+        <Linker>
+            <Add library="wxmsw26" />
+            <Add directory="$(#WX.lib)\gcc_dll$(WX_CFG)" />
+            <Add directory="$(#WX.lib)" />
+        </Linker>
+        <Unit filename="listtest.cpp">
+            <Option compilerVar="CPP" />
+            <Option target="listctrl" />
+        </Unit>
+        <Unit filename="listtest.h">
+            <Option compilerVar="CPP" />
+            <Option compile="0" />
+            <Option link="0" />
+            <Option target="listctrl" />
+        </Unit>
+        <Unit filename="listtest.rc">
+            <Option compilerVar="WINDRES" />
+            <Option objectName="listtest.res" />
+            <Option target="listctrl" />
+        </Unit>
+    </Project>
+</CodeBlocks_project_file>
