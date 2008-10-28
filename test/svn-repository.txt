@@ -1,0 +1,1 @@
+url="svn+ssh://tiwag@svn.berlios.de/svnroot/repos/cb-etools/test"
